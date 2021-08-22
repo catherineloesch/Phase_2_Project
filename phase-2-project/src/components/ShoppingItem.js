@@ -1,0 +1,15 @@
+import React from "react";
+
+function ShoppingItem({ category, title, onDeleteItem }) {
+
+    function handleClick() {onDeleteItem(title)}
+    return (
+        <div className="shopping-item">
+            <div className={"shopping-cat"}>{category}</div>
+            <div className={"shopping-item-title"}>{title}</div>
+            <button className="delete-button" onClick={handleClick}>X</button>
+        </div>
+    )
+}
+
+export default ShoppingItem;

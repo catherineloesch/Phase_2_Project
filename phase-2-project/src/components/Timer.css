@@ -1,0 +1,39 @@
+.pomodoro {
+    background-image: url("../assets/tomato.png");
+    height: 650px; 
+    width: 660px;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    margin-top: 50px;
+
+}
+
+
+  
+.message {
+    font-size: 25px;
+   
+    background-color: #d9edc3;
+    color: #37784d;
+    padding: 2%;
+
+
+    position: relative;
+    display: inline-block;
+    margin: 20px auto;
+ 
+    border-radius: 16px;
+    border: 1px solid #37784d;
+  
+  
+    font-weight: 600;
+    text-align: center;
+}
+
+.timer {
+    margin-top: 240px;
+    font-size: 95px;
+    color: rgb(60, 235, 37);
+
+}

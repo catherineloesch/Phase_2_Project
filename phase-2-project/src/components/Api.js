@@ -67,7 +67,8 @@ function Api() {
             ? "weather-api warm"
                 : "weather-api")
                     : "weather-api"}>
-                <h3 className="weather-title">Hello</h3>
+            
+                <h3 className="weather-title">Get your local weather forecast</h3>
                 <div className="search-box">
                     <input
                         type="text"

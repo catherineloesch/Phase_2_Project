@@ -14,6 +14,7 @@
     background-position: bottom;
     transition: 0.4 ease-out;
     min-height: 60vh;
+    border-radius: 16px;
 
 }
 

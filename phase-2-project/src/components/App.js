@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       { /* working title ?? */ }
-      <h1>SKYNET</h1>
+      <h1>Productivity Ninja</h1>
       <NavBar />
       <Switch>
           <Route exact path="/todo-list">

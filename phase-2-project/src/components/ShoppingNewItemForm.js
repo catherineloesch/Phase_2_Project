@@ -30,12 +30,14 @@ function ShoppingNewItemForm({ categories, onNewShoppingItemFormSubmit}) {
     }
    
     return (
-        <div className="new-shopping-item-form">
-        <form onSubmit={handleSubmit}>
+        <div>
+        <form onSubmit={handleSubmit} className="new-shopping-item-form">
             <label>
                 Title: <input type="text" onChange={handleTitleChange} value={newItemTitle}></input>
             </label>
                 <label> Category: <select onChange={handleSelectedCategory}>
+                <option selected disabled hidden>Choose a Category</option>
+
                         {options}
                     </select>
                 </label>

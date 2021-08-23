@@ -91,12 +91,21 @@ button {
     color:  #5a823c;
 }
   
-
+select {
+    width: 79%;
+    font-size: 17px;
+    padding: 3px 5px;
+    border-radius: 5px;
+    border:1px solid #5a823c; 
+    
+}
 
 input[type=text] {
-    padding: 3px; 
     border:1px solid #5a823c; 
     border-radius: 5px;
+    width: 85%;
+    font-size: 17px;
+    padding: 3px 15px;
 }
 
 input[type=submit] {
@@ -114,5 +123,7 @@ input[type=submit] {
 
 
 .new-shopping-item-form {
-    display: grid;
+    display:grid;
+    text-align:right;
+    grid-row-gap: 10px;
 }

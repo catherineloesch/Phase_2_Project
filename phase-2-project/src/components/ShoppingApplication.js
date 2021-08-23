@@ -22,7 +22,7 @@ function ShoppingApplication() {
     const selectedItems = items.filter((item) => (item.category === selectedCategory || selectedCategory === "All"))
 
     return (
-        <div>
+        <div className="App">
             <h2>Shopping List</h2>
             <ShoppingList onDeleteItem={handleDeleteItem} items={selectedItems} categories={shoppingCategories} selectedCategory={selectedCategory} onCategorySelected={handleCategorySelected} onNewShoppingItemFormSubmit={addNewItem}/>
         </div>)

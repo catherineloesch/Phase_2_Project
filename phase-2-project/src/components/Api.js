@@ -21,9 +21,14 @@ function Api() {
                 const keys = Object.keys(data.articles)
                 setHeadlines( keys.map((key) => {
                     return (
-                        <div key={key}>
+                        <div key={key} className="headline">
+                            <div><img className="headline-image" src={data.articles[key]["urlToImage"]}/></div>
+                            
+                            <div className="headline-text">
                             <a href={data.articles[key]["url"]} className="headline-title">{data.articles[key]["title"]}</a>
-                            <div className="headline-description">{data.articles[key]["description"]}</div>
+                            <div className="headline-description">
+                            {data.articles[key]["description"]}</div>
+                            </div>
                            
                         </div>
                     )
@@ -93,7 +98,7 @@ function Api() {
                 
             </div>
             <div>
-                <h3>Today's Headlines from the BBC:</h3>
+                <h3 className="headline-header">Today's Headlines from the BBC:</h3>
                     {headlines}
             </div>
             </div>

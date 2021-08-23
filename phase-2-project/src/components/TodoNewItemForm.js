@@ -30,13 +30,13 @@ function TodoNewItemForm({ categories, onNewTodoFormSubmit}) {
     }
    
     return (
-        <div className="new-todo-form">
-        <form onSubmit={handleSubmit}>
+        <div>
+        <form onSubmit={handleSubmit} className="new-todo-form">
             <label>
                 Title: <input type="text" onChange={handleTitleChange} value={newItemTitle}></input>
             </label>
-                <label>
-                    Category: <select onChange={handleSelectedCategory}>
+                <label> Category: <select onChange={handleSelectedCategory}>
+                <option selected disabled hidden>Choose a Category</option>
                         {options}
                     </select>
                 </label>

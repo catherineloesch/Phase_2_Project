@@ -4,8 +4,8 @@ import "./Api.css"
 function Api() {
 
         const api = {
-            key: "c8f56683faf02b272551d2ca76641a40",
-            base: "https://api.openweathermap.org/data/2.5"
+            key: "0aed349e4c72522397331f787213e4ce",
+            base: "https://api.openweathermap.org/data/2.5/"
 
         }
 
@@ -26,36 +26,51 @@ function Api() {
         function search(event) {
             if (event.key === "Enter") {
                 // GET request
-                fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
+                fetch(`${api.base}weather?q=${query}&units=metric&appid=${api.key}`)
                 .then(res => res.json())
-                .then(data => setWeather(data));
+                .then(result => {
+                    setQuery("")
+                    setWeather(result)
+                    console.log(result)
+                });
             }
         }
 
 
 
-    return (<div className="weather-api">
-                <h3 className="weather-title">This is my Weather API</h3>
+    return (<div className={(typeof weather.main !== "undefined")
+        ? ((weather.main.temp > 16)
+            ? "weather-api warm"
+                : "weather-api")
+                    : "weather-api"}>
+                <h3 className="weather-title">Hello</h3>
                 <div className="search-box">
                     <input
                         type="text"
                         className="search-bar"
                         placeholder="Search..."
+                        onChange={(event) => (setQuery(event.target.value))}
+                        value={query}
+                        onKeyPress={search}
                     ></input>
                 </div>
-                <div className="location-box">
-                    <div className="location">
-                        London, UK
+                {(typeof weather.main !== "undefined") ? (
+                <div>
+                    <div>
+                        <div className="location-box">
+                            <div className="location">
+                                {weather.name}, {weather.sys.country}
+                            </div>
+                            <div className="date">
+                            {dateBuilder(new Date())}
+                            </div>
+                        </div>
+                        <div className="weather-box">
+                            <div className="temp"> {Math.round(weather.main.temp)}°C</div>
+                            <div className="weather">{weather.weather[0].main}</div>
+                        </div>
                     </div>
-                    <div className="date">
-                    {dateBuilder(new Date())}
-                    </div>
-                </div>
-                <div className="weather-box">
-                    <div className="temp"> 15°C</div>
-                    <div className="weather"> Sunny </div>
-
-                </div>
+                </div>) : ("")}
             </div>)
 }
 

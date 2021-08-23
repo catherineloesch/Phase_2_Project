@@ -23,7 +23,7 @@ function NavBar() {
 
     return (<div className="navbar">
         <NavLink
-            to="/"
+            to="/api"
             exact
             style={linkStyles}
             activeStyle={activeStyles}
@@ -57,15 +57,6 @@ function NavBar() {
             activeStyle={activeStyles}
             className="navlink"
         >Pomodoro Timer
-        </NavLink>
-
-        <NavLink
-            to="/api"
-            exact
-            style={linkStyles}
-            activeStyle={activeStyles}
-            className="navlink"
-        >API
         </NavLink>
 
     </div>)

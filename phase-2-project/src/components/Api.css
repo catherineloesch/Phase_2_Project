@@ -10,17 +10,18 @@
 
 
 
+
 .weather-api {
-    background-image: url("../assets/cold.jpg");
+    background-image: url("../assets/frosty.jpg");
     background-size: cover;
     background-position: bottom;
     transition: 0.4 ease-out;
-    min-height: 100vh;
+    min-height: 80vh;
 
 }
 
 .weather-api.warm {
-    background-image: url("../assets/warm.jpg");
+    background-image: url("../assets/sunset.jpg");
 }
 
 .search-box {

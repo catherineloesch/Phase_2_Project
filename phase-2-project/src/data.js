@@ -1,7 +1,7 @@
 
 export const todoCategories = ["All", "Work", "Home", "Finance"]
 
-export const shoppingCategories = ["All", "Diary", "Frozen", "Bakery", "Fruit/Veg", "Toiletries", "Household", "Food Cupboard"]
+export const shoppingCategories = ["All", "Diary", "Frozen", "Bakery", "Fruit/Veg", "Toiletries", "Household", "Cupboard"]
 
 export const tasks = [
     {
@@ -32,7 +32,7 @@ export const shoppingItems = [
     },
     {
         title: "Rice",
-        category: "Food Cupboard"
+        category: "Cupboard"
     },
     {
         title: "Bread Rolls",

@@ -26,6 +26,7 @@ function TodoNewItemForm({ categories, onNewTodoFormSubmit}) {
             category: newItemCategory
         }
         onNewTodoFormSubmit(newTodo)
+        setNewItemTitle("")
 
     }
    

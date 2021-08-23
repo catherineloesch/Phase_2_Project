@@ -22,7 +22,7 @@ function Api() {
                 setHeadlines( keys.map((key) => {
                     return (
                         <div key={key} className="headline">
-                            <div><img className="headline-image" src={data.articles[key]["urlToImage"]}/></div>
+                            <div><img className="headline-image" src={data.articles[key]["urlToImage"]} alt={data.articles[key]["title"]}/></div>
                             
                             <div className="headline-text">
                             <a href={data.articles[key]["url"]} className="headline-title">{data.articles[key]["title"]}</a>

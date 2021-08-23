@@ -26,6 +26,7 @@ function ShoppingNewItemForm({ categories, onNewShoppingItemFormSubmit}) {
             category: newItemCategory
         }
         onNewShoppingItemFormSubmit(newItem)
+        setNewItemTitle("")
 
     }
    
@@ -36,7 +37,7 @@ function ShoppingNewItemForm({ categories, onNewShoppingItemFormSubmit}) {
                 Title: <input type="text" onChange={handleTitleChange} value={newItemTitle}></input>
             </label>
                 <label> Category: <select onChange={handleSelectedCategory}>
-                <option selected disabled hidden>Choose a Category</option>
+                <option value="default" selected disabled hidden>Choose a Category</option>
 
                         {options}
                     </select>

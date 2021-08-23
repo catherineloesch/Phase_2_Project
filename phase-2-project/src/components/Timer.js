@@ -8,6 +8,7 @@ function Timer() {
     const [seconds, setSeconds] = useState(0)
     const [displayMessage, setDisplayMessage] = useState(false)
 
+   
     // double digits
     const timerMinutes = minutes < 10 ? `0${minutes}` : minutes ;
     const timerSeconds = seconds < 10 ? `0${seconds}` : seconds ;
@@ -19,23 +20,17 @@ function Timer() {
             if (seconds === 0) {
                 if (minutes !== 0) {
                     setSeconds(59)
-                    setMinutes((minutes) => {
-                        return (minutes-1)
-                    })
+                    setMinutes((minutes) => (minutes-1))
                 } else {
                     let minutes = displayMessage ? 24 : 4
                     let seconds = 59
 
                     setSeconds(seconds)
                     setMinutes(minutes)
-                    setDisplayMessage((displayMessage) => {
-                        return (!displayMessage)
-                    })
-                }
+                    setDisplayMessage((displayMessage) => (!displayMessage))
+                    }      
             } else {
-                setSeconds((seconds) => {
-                    return (seconds-1)
-                })
+                setSeconds((seconds) => (seconds-1))
             }
 
         }, 1000)
@@ -48,6 +43,7 @@ function Timer() {
                         {displayMessage ? <div className="message">Break time - New session starts in:</div> : <div className="message"> Pomodoro Session - Next break starts in: </div>}
                         <div className="timer">{timerMinutes} : {timerSeconds}</div>
                 </div>
+                
                     
                 </div>
             </div>

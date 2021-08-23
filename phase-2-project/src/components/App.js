@@ -26,7 +26,7 @@ function App() {
             <Timer />
           </Route>
 
-          <Route exact path="/api">
+          <Route path="/">
             <Api />
           </Route>
 

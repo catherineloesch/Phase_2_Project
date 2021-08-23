@@ -11,17 +11,18 @@ export const tasks = [
     {
         title: "do laundry",
         category: "Home"
-    }, {
+    },
+    {
         title: "go grocery shopping",
         category: "Home"
-
     }, 
+    {
+        title: "pay electricity bill",
+        category: "Finance"
+    },
     {
         title: "finish report",
         category: "Work"
-    },
-    {title: "pay electricity bill",
-    category: "Finance"
     }
 ]
 
@@ -31,29 +32,20 @@ export const shoppingItems = [
         category: "Diary"
     },
     {
-        title: "Rice",
-        category: "Cupboard"
-    },
-    {
-        title: "Bread Rolls",
-        category: "Bakery"
-    },
-    {
         title: "Milk",
         category: "Diary"
     },
     {
-        title: "Pineapple",
+        title: "Potatoes",
         category: "Fruit/Veg"
     },
     {
         title: "Mushrooms",
         category: "Fruit/Veg"
-
     },
     {
-        title: "Onions",
-        category: "Fruit/Veg"
+        title: "Bread Rolls",
+        category: "Bakery"
     }
 ]
 

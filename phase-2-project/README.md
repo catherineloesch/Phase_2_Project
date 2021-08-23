@@ -5,7 +5,9 @@ This application navigates between 4 different components:
 1) Home
 
     The Home component enables the user to get a weather forcast based on their location.
-    It also provides the user with some of the latest news headline from the BBC.
+    The weather data is fetched from the openweathermap API (https://openweathermap.org/api)
+    
+    It also provides the user with some of the latest news headline from the BBC, fetched from https://newsapi.org/
 
 2) Todo  List
 
@@ -18,5 +20,10 @@ This application navigates between 4 different components:
 4) Pomodoro Timer
 
     This last component contains a timer feature that supports the pomodoro technique which traditionally break work into 25-minute intervals, separated by 5-minute breaks.
-    For more info on the pomodoro technique, visit https://en.wikipedia.org/wiki/Pomodoro_Technique.
+    For more info on the pomodoro technique, visit
+    https://lifehacker.com/productivity-101-a-primer-to-the-pomodoro-technique-1598992730
+    https://todoist.com/productivity-methods/pomodoro-technique
 
+    
+    
+    

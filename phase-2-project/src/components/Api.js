@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Api.css"
 
 function Api() {
@@ -6,11 +6,29 @@ function Api() {
         const api = {
             key: "0aed349e4c72522397331f787213e4ce",
             base: "https://api.openweathermap.org/data/2.5/"
-
         }
 
         const [query, setQuery] = useState("")
         const [weather, setWeather] = useState({})
+        const apiKey = "778d70e78cc0460699eab0b4f4149cb6"
+        const [headlines, setHeadlines] = useState("")
+
+        useEffect(() => {
+            fetch(`https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=${apiKey}`)
+            .then(res => res.json())
+            .then(data => {
+                console.log(data.articles)
+                const keys = Object.keys(data.articles)
+                setHeadlines( keys.map((key) => {
+                    return (
+                        <div key={key}>
+                            <a href={data.articles[key]["url"]} className="headline-title">{data.articles[key]["title"]}</a>
+                            <div className="headline-description">{data.articles[key]["description"]}</div>
+                           
+                        </div>
+                    )
+                }))
+            })},[])
 
         function dateBuilder(d) {
             let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -38,7 +56,8 @@ function Api() {
 
 
 
-    return (<div className={(typeof weather.main !== "undefined")
+    return (<div>
+        <div className={(typeof weather.main !== "undefined")
         ? ((weather.main.temp > 16)
             ? "weather-api warm"
                 : "weather-api")
@@ -71,7 +90,14 @@ function Api() {
                         </div>
                     </div>
                 </div>) : ("")}
-            </div>)
+                
+            </div>
+            <div>
+                <h3>Today's Headlines from the BBC:</h3>
+                    {headlines}
+            </div>
+            </div>
+            )
 }
 
 

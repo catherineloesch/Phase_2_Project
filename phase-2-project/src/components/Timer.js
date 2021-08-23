@@ -1,7 +1,8 @@
 import React from "react";
 
+
 function Timer() {
-    return <div>This is my Timer</div>
+    return <div></div>
 }
 
 
